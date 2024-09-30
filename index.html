@@ -6,26 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Check the console for output</h1>
-    <script>
-        
+    <h1>Car Management System</h1>
+    <form id =carSystem>
+        <label for="name">Car Name:</label>
+        <input type="text" id="name" required>
 
-        class person
-        {
-            constructor(name,age)
-            {
-                this.name=name;
-                this.age=age;
-            }
-            introduce()
-            {
-                console.log("hello, my name is", (this.name),"and I am", (this.age),"years old.")
-            }
-        }
-        const person1 = new person("Alice",30)
-        person1.introduce();
+        <label for="model">Car Model:</label>
+        <input type="text" id="model">
 
-    </script>
+        <label for="year">Car Model:</label>
+        <input type="text" id="year">
+
+        <label for="price">Car Price:</label>
+        <input type="text" id="price">
+
+    </form>
 </body>
 
 
