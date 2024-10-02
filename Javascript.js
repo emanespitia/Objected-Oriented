@@ -1,5 +1,6 @@
 class car 
 {
+    //setting name, model, year, and price of car
     constructor(name, model, year, price) 
     {
         this.name = name
@@ -8,6 +9,7 @@ class car
         this.price = price
     }
 
+    //calculates the price of vehicles with depreciation
     calculatedPrice() 
     {
         let dp = this.price - 500*(2024 - this.year)
@@ -37,7 +39,7 @@ class carManager
         this.displayCars()
     }
 
-
+    //uses a loop in order to go through array and display vehicles
     displayCars()
     {
         const list = document.getElementById('list')
@@ -62,8 +64,10 @@ class carManager
 //begin initializations
 const carManager1 = new carManager()
 
+//listener for when user clicks submit
 document.getElementById('carSystem').addEventListener('submit', function(event){
     event.preventDefault()
+    //getting data from form and sending it to car then reseting form
     const name = document.getElementById('name').value
     const model = document.getElementById('model').value
     const year = parseInt(document.getElementById('year').value)
@@ -76,6 +80,7 @@ document.getElementById('carSystem').addEventListener('submit', function(event){
     document.getElementById('carSystem').reset()
 })
 
+//event listener for button to display the total price of vehicles
 document.getElementById('total').addEventListener('click', function(){
     alert(carManager1.showTotalPrice())
 })
